@@ -17,6 +17,10 @@ public class Employee extends Person implements Profession{
         super(name, age, contact);
     }
 
+    public Employee(Person person) {
+        super(person);
+    }
+
     @Override
     public String describeProfession() {
         return null;

@@ -42,7 +42,12 @@ public class Supermarket extends Building {
         if(inventory instanceof Product) {
             products.add((Product) inventory);
         }else{
-            // TODO: 10/12/18 handle exception
+            try{
+                products.add((Product) inventory);
+            }
+            catch (Exception e){
+                System.out.println("This is not a product");
+            }
         }
 
     }

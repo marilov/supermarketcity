@@ -24,7 +24,7 @@ public class City {
             List<Person> people = maternityHouse.createPeople();
             for (Person person : people) {
                 if (peopleValidator.validate(person)) {
-                    Employee employee = new Employee();
+                    Employee employee = new Employee(person);
                     building.addPerson(employee);
                 }
             }
@@ -33,5 +33,4 @@ public class City {
         }
 
     }
-
 }
